@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!--Spinner refrenced from http://stackoverflow.com/questions/37250397/how-to-add-a-spinner-next-to-a-menu-in-the-toolbar-->
+    <!--<item-->
+        <!--android:title="@string/spnr_title"-->
+        <!--android:id="@+id/movieSpinner"-->
+        <!--android:actionViewClass="android.widget.Spinner"-->
+        <!--app:showAsAction="always"-->
+        <!--/>-->
+
+    <item
+        android:title="@string/menu_popular"
+        android:id="@+id/menuPopular"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:title="@string/menu_top_rated"
+        android:id="@+id/menuTopRated"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        />
+
+    <item
+    android:title="@string/menu_favourite"
+    android:id="@+id/menuFavourite"
+    android:orderInCategory="3"
+    app:showAsAction="never"
+    />
+
+    <item
+        android:title="@string/menu_search"
+        android:id="@+id/menuSearch"
+        android:orderInCategory="4"
+        app:showAsAction="never"
+        />
+    <item
+        android:title="Genres"
+        android:orderInCategory="5"
+        app:showAsAction="never"
+        >
+        <menu>
+            <item
+                android:title="@string/menu_action"
+                android:id="@+id/menu_action"
+                />
+            <item
+                android:title="@string/menu_adventure"
+                android:id="@+id/menu_adventure"
+                />
+            <item
+                android:title="@string/menu_animation"
+                android:id="@+id/menu_animation"
+                />
+            <item
+                android:title="@string/menu_comedy"
+                android:id="@+id/menu_comedy"
+                />
+            <item
+                android:title="@string/menu_crime"
+                android:id="@+id/menu_crime"
+                />
+            <item
+                android:title="@string/menu_documentary"
+                android:id="@+id/menu_documentary"
+                />
+            <item
+                android:title="@string/menu_drama"
+                android:id="@+id/menu_drama"
+                />
+            <item
+                android:title="@string/menu_family"
+                android:id="@+id/menu_family"
+                />
+            <item
+                android:title="@string/menu_fantasy"
+                android:id="@+id/menu_fantasy"
+                />
+
+            <item
+                android:title="@string/menu_history"
+                android:id="@+id/menu_history"
+                />
+            <item
+                android:title="@string/menu_horror"
+                android:id="@+id/menu_horror"
+                />
+            <item
+                android:title="@string/menu_music"
+                android:id="@+id/menu_music"
+                />
+            <item
+                android:title="@string/menu_mystery"
+                android:id="@+id/menu_mystery"
+                />
+            <item
+                android:title="@string/menu_romance"
+                android:id="@+id/menu_romance"
+                />
+            <item
+                android:title="@string/menu_sci_fi"
+                android:id="@+id/menu_sci_fi"
+                />
+            <item
+                android:title="@string/menu_tv_movie"
+                android:id="@+id/menu_tv_movie"
+                />
+            <item
+                android:title="@string/menu_thriller"
+                android:id="@+id/menu_thriller"
+                />
+            <item
+            android:title="@string/menu_war"
+            android:id="@+id/menu_war"
+            />
+            <item
+                android:title="@string/menu_western"
+                android:id="@+id/menu_western"
+                />
+        </menu>
+
+
+        </item>
+
+
+</menu>
