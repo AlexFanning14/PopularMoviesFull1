@@ -10,6 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.app.NavUtils;
+import android.support.v4.app.ShareCompat;
 import android.support.v4.content.Loader;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +30,7 @@ import com.example.android.popularmovies.Adapters.TrailerDataAdapter;
 import com.example.android.popularmovies.Loaders.ReviewLoader;
 import com.example.android.popularmovies.Loaders.TrailerLoader;
 import com.example.android.popularmovies.Data.FavouriteContract;
+import com.example.android.popularmovies.Utils.NetworkUtilities;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -82,8 +84,47 @@ public class MovieDetailsActivity extends AppCompatActivity implements TrailerDa
         getSupportLoaderManager().initLoader(ReviewLoader.MOVIE_LOADER_ID,null,this);
         setUpLoaders();
 
+        registerForContextMenu(mTrailerGrid);
 
 
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        int position = -1;
+        TrailerDataAdapter tda = ((TrailerDataAdapter)mTrailerGrid.getAdapter());
+        try {
+            position = tda.getPosition();
+        }catch(Exception e){
+            return super.onContextItemSelected(item);
+        }
+
+        switch(item.getItemId()){
+            case R.id.menuShare:
+                String id = tda.getKeyAtPosition(position);
+                shareTrailer(id);
+                break;
+            case  R.id.menuYoutube:
+                mTrailerGrid.findViewHolderForAdapterPosition(position).itemView.performClick();
+                break;
+        }
+
+
+        return super.onContextItemSelected(item);
+    }
+
+
+    private void shareTrailer(String id){
+        final String MIME_TYPE = "text/plain";
+        final String TITLE = "Share Trailer";
+        final String YOUTUBE_LINK = "Check out this cool Movie Trailer! " + Uri.parse(getString(R.string.youtube_web_intent) + id).toString();
+
+
+        ShareCompat.IntentBuilder.from(this)
+                .setChooserTitle(TITLE)
+                .setType(MIME_TYPE)
+                .setText(YOUTUBE_LINK)
+                .startChooser();
 
     }
 

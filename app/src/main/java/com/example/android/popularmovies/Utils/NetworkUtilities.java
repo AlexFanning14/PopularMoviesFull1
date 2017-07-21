@@ -68,6 +68,8 @@ public class NetworkUtilities {
         return url;
     }
 
+
+
     public static URL buildGenreUrl(String sortByMovies,Context c) {
         //Build URL method snippets taken from Udacity Android Dev chaapter 2
         api_key_val = c.getString(R.string.mov_api_key);

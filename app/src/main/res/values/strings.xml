@@ -106,7 +106,7 @@
     <string name="menu_tv_movie">TV Movie</string>
     <string name="menu_thriller">Thriller</string>
     <string name="menu_war">War</string>
-    <string name="menu_western">TV Movie</string>
+    <string name="menu_western">Western</string>
 
     <string name="menu_action_id">28</string>
     <string name="menu_adventure_id">12</string>
@@ -122,11 +122,13 @@
     <string name="menu_music_id">10402</string>
     <string name="menu_mystery_id">9648</string>
     <string name="menu_romance_id">10749</string>
-    <string name="menu_sci_fi_id">878Fiction</string>
+    <string name="menu_sci_fi_id">878</string>
     <string name="menu_tv_movie_id">10770</string>
     <string name="menu_thriller_id">53</string>
     <string name="menu_war_id">10752</string>
     <string name="menu_western_id">37</string>
 
-
+    <!--Sharing-->
+    <string name="menu_youtube">View Trailer in Youtube</string>
+    <string name="menu_share">Share This Trailer</string>
 </resources>
